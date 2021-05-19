@@ -218,7 +218,7 @@ p {
         padding: 0 3rem;
     }
 }
-/*
+
 @media (prefers-color-scheme: light){
     :root {
         --bg-main: hsl(0, 0%, 90%);
@@ -231,13 +231,15 @@ p {
         --key: hsl(45, 7%, 89%);
         --key-shadow: hsl(35, 11%, 61%);
         --text:  hsl(60, 10%, 19%);
+        --attr-text: hsl(60, 10%, 19%);
+        --header-text: hsl(60, 10%, 19%);
     }
-    .toggle-window {
-        justify-content: center;
-    }
+
     #default, #dark {
+        background-color: inherit;
     }
     #light {
+       background-color: var(--equals-key);
     }
 }
 
@@ -250,19 +252,14 @@ p {
         --accent-key-shadow: hsl(285, 91%, 52%);
         --equals-key: hsl(176, 100%, 44%);
         --equals-key-shadow: hsl(177, 92%, 70%);
+        --equals-text: hsl(198, 20%, 13%);
         --key: hsl(268, 47%, 21%);
         --key-shadow: hsl(290, 70%, 36%);
         --text: hsl(52, 100%, 62%);
+        --attr-text: hsl(52, 100%, 62%);
+        --header-text: hsl(52, 100%, 62%);
     }
-    .title, p, .theme-toggle, .screen {
-        color: var(--text);
-    }
-    #equals-key {
-        color: hsl(198, 20%, 13%)
-    }
-    .toggle-window {
-        justify-content: flex-end;
-    }
+
     #default, #light {
         background-color: inherit;
     }
