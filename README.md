@@ -29,17 +29,18 @@ Users should be able to:
 - Adjust the color theme based on their preference
 - **Bonus**: Have their initial theme preference checked using `prefers-color-scheme` and have any additional changes saved in the browser
 
-### Screenshot
+### Screenshots
 
-DeskTop:
+# DeskTop:
 ![](./images/calculator-app-desktop.png)
 
+# Mobile
 ![](./images/mobile-calculator-app.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://github.com/techmeg/fm-calculator-app](https://github.com/techmeg/fm-calculator-app)
+- Live Site URL: [https://techmeg.github.io/fm-calculator-app/](https://techmeg.github.io/fm-calculator-app/)
 
 ## My process
 
@@ -57,9 +58,9 @@ I attacked the front end first, implementing all the styles and then hit the JS 
 
 This was a really fun project!
 
-I have not used html attribures before ([data-theme]), nor had I used prefers-color-scheme media queries so lots of googling ensued. I got the media queries set up first and then later figured out how to override in JS. 
+I have not used html attribures before (`[data-theme]`), nor had I used `prefers-color-scheme` media queries so lots of googling ensued. I got the media queries set up first and then later figured out how to override in JS. 
 
-I used grid-auto-flow for the first time -- tip of the hat to brasspetals -- was intrigued by that when looking at her code for the stats card.
+I used `grid-auto-flow` for the first time -- tip of the hat to brasspetals -- was intrigued by that when looking at her code for the stats card.
 
 I was mostly tickled to practice some JS after working in React. Lotta googling, but fun to get it working.
 
