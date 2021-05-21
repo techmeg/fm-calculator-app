@@ -8,10 +8,31 @@ const delKey = document.getElementById("del");
 delKey.addEventListener('click', () => {
 
     if(screenNum != 0) {
-        screenNum = Math.floor(screenNum/10);
-    }
+        let temp = screenNum.toString();
+        console.log(temp)
+        if(temp.length == 1){
+            screenNum = 0;
+        }
+        //if no commas or .'s
+        else if(( !temp.includes('.')) && ( !temp.includes(','))) {
+            screenNum = splitJoin(temp);
+        } else if (temp.includes('.')){
+            screenNum = splitJoin(temp);
+        } else {
+            temp = splitJoin(temp);
+            temp = temp.toString().replace(/\,/g,'');
+            screenNum = parseInt(temp).toLocaleString('en-US');
+            console.log(temp)
+        }
+    } 
     screen.innerHTML = screenNum;
 });
+
+function splitJoin(temp) {
+    temp = temp.split('');
+    temp.pop();
+    return temp.join('');
+}
 
 const resetKey = document.getElementById('reset-key');
 resetKey.addEventListener('click', () => {
@@ -28,13 +49,21 @@ for(let i =0; i <keys.length; i++){
 
 function changeScreenNum(ev) {
     const keyNum = ev.target.innerHTML;
-
+    
     if(screenNum == 0) {
         screenNum = keyNum;
-    }
-    else {
+    } //no commas beyond decimal point, so add keyNum to end
+    else if(((keyNum == '.') || (screenNum.toString().includes('.')) 
+        || (( !screenNum.toString().includes('.')) && (screenNum.length < 3)))){
         screenNum = screenNum+keyNum;
-    }
+        // add commas to integers
+    } else {
+        let temp = screenNum.toString();
+            temp = temp.replace(/\,/g,'');
+            temp += keyNum;
+            screenNum = parseInt(temp).toLocaleString('en-US');
+        }
+    
     screen.innerHTML = screenNum;
 }
 
@@ -68,6 +97,4 @@ function sum(ev){
     //reset
     resultArr = [];
     result = '';
-    //and figure out how to chain sums
 }
-    
