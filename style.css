@@ -68,6 +68,11 @@ button {
     font-family: 'Spartan', sans-serif;
     font-size: var(--num-size);
 }
+button:focus, button:hover {
+    box-shadow: none;
+    transform: translateY(3.5px);
+}
+
 body {
     background-color: var(--bg-main);
 
@@ -80,7 +85,9 @@ body {
     max-width: 555px;
     padding: 2rem;
 }
-
+.calculator * {
+    transition: background-color 1s, color .1s ease-in-out;
+  }
 .header {
     display: flex;
     justify-content: space-between;
@@ -189,6 +196,11 @@ p {
     color: var(--equals-text);
     font-size: 1rem;
     grid-column: 3 / span 2;
+}
+#del:focus, #del:hover,
+#reset-key:focus, #reset-key:hover, 
+#equals-key:focus, #equals-key:hover {
+    box-shadow: none;
 }
 .attribution { 
     background-color: var(--bg-main);
