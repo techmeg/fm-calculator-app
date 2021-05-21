@@ -68,10 +68,6 @@ button {
     font-family: 'Spartan', sans-serif;
     font-size: var(--num-size);
 }
-button:focus, button:hover {
-    box-shadow: none;
-    transform: translateY(3.5px);
-}
 
 body {
     background-color: var(--bg-main);
@@ -180,6 +176,11 @@ p {
     color: var(--text);
     padding: .8rem 0 .5rem 0;
     text-align: center;
+}
+.key:focus, .key:hover,
+.operator:focus, .operator:hover {
+    box-shadow: none;
+    transform: translateY(3.5px);
 }
 #del, #reset-key {
     background-color: var(--accent-key);
