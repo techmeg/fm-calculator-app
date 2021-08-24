@@ -61,7 +61,7 @@ function changeScreenNum(ev) {
         let temp = screenNum.toString();
             temp = temp.replace(/\,/g,'');
             temp += keyNum;
-            screenNum = parseInt(temp).toLocaleString('en-US');
+            screenNum = parseFloat(temp).toLocaleString('en-US');
         }
     
     screen.innerHTML = screenNum;
@@ -90,10 +90,11 @@ equals.addEventListener('click', sum);
 function sum(ev){
     resultArr.push(screenNum);
     result = resultArr.join('');
+    result = result.replace(/\,/g,'');
     //evaluate string 
     screenNum = window.eval(result);
     //set solution in the screen window
-    screen.innerHTML = screenNum;
+    screen.innerHTML = parseFloat(screenNum).toLocaleString('en-US');
     //reset
     resultArr = [];
     result = '';

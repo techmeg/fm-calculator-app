@@ -217,9 +217,7 @@ p {
 }
 
 @media (min-width: 600px) {
-    body {
-        background-color: var(--bg-main);
-    }
+
     .calculator {
         max-width: 770px;
         margin: auto;
@@ -233,8 +231,9 @@ p {
     }
 
 }
+/* first try -- does not accommodate the default theme
 
-@media (prefers-color-scheme: light){
+/* @media (prefers-color-scheme: light){
     :root {
         --bg-main: hsl(0, 0%, 90%);
         --bg-keypad: hsl(0, 5%, 81%);
@@ -281,4 +280,4 @@ p {
     #dark {
         background-color: var(--equals-key);
     }
-}
+} */

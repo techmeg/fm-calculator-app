@@ -1,6 +1,5 @@
 const themes = document.getElementsByClassName('theme');
 for(let i =0; i <themes.length; i++){
-    //set backgrounds of all theme indicators to inherit
     themes[i].addEventListener('click', changeTheme);
 }
 
@@ -8,7 +7,7 @@ for(let i =0; i <themes.length; i++){
 function changeTheme(ev) {
     //change color variable
     let colorTheme = ev.target.id;
-    const currentTheme = document.documentElement.getAttribute("data-theme");
+    // set data-theme to new theme
     document.documentElement.setAttribute('data-theme', colorTheme);
     
     //set backgrounds of all theme indicators to inherit
